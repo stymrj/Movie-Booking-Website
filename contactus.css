@@ -1,0 +1,162 @@
+
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {   
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 10px;
+    font-style: italic;
+    text-decoration-line: underline;
+   
+  }
+  body{
+    width: 100%;
+    height: 100%;
+    background-image:url('contact.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  
+  a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+ 
+  p{
+    color: white;
+    font-size: larger;
+    margin-left: 150px;
+    margin-top:30px;
+    line-height: 30px;
+    
+  }
+ 
+  .contact-details{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 40px;
+  }
+  .details{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+  }
+  
+  .bot{
+    margin-top: 150px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+  }
+
+  a:hover{
+    color: rgb(185, 177, 177);
+  }
+.navbar{
+    width: 80%;
+    margin:auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+.navbar ul li a{
+    text-decoration-line: underline;
+    -webkit-text-stroke-color: rgb(17, 19, 19);
+    font-style: bold;
+   
+    font-size: 21px;
+    color: rgb(248, 243, 243);
+    text-transform: uppercase;
+}
+.logo{
+    width:100px;
+    cursor: pointer;
+}
+
+
+/* icons start */
+/* *********** */
+
+.social-icon {
+  margin: 2.5rem auto;
+  display: flex;
+  justify-content: center;
+  column-gap: 25px;
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+
+.icons:hover {
+  outline-offset: 4px;
+}
+
+.icons:hover {
+  animation: shake 0.3s;
+}
+
+/* instagram */
+.fa-instagram {
+  color: #d62976;
+}
+
+.fa-instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf407 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d76;
+  color: white;
+}
+
+/* linkedin */
+.fa-linkedin {
+  font-size: 24px;
+  color: #0a66c2;
+  background-color: transparent;
+}
+
+.fa-linkedin:hover {
+  background-color: #0a66c2;
+  outline-color: #0077b5;
+  color: white;
+}
+
+/* github */
+.fa-github {
+  color: #6e5494;
+}
+
+.fa-github:hover {
+  color: white;
+  outline-color: #6e5494;
+  background-color: #282727;
+}

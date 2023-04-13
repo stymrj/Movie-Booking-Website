@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payemnt form</title>
+    <link rel="stylesheet" href="payment.css">
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+        <df-messenger
+        df-cx="true"
+        location="us-central1"
+        chat-title="Movie Booking Bot"
+        agent-id="cdf0712a-a7a8-4bd3-80c8-509293a3a1bc"
+        language-code="en"
+      ></df-messenger>
+</head>
+<body>
+    <div class="container">
+    <form action="">
+        <h1 class="main_heading">Payment Form</h1>
+        <hr>
+        <h2>User Information</h2>
+        <p>Name: * 
+            <input type="text" name="name" placeholder="Type your name" required>
+        </p>
+       <fieldset>
+            <legend>Gender *</legend> 
+            <p>
+            Male: <input type="radio" name="gender" id="male" required>
+            Female: <input type="radio" name="gender" id="female" required>
+            Other: <input type="radio" name="gender" id="other" required>
+        </p>
+    </fieldset>
+      <p>Email: * 
+        <input type="email" name="email" id="email" placeholder="abc@gmail.com" required>
+     </p>
+
+      <p>Mobile Number: *
+         <input type="number" name="pincode" id="pincode" placeholder="mobile number" required>
+        </p>
+
+      <h2>Payment Information</h2>
+      <p>Accepted Cards class</p>
+      <img src="visa.png" height ="29">
+      <img src="mastercard.png" height ="24">
+      <img src="rupay.png" height ="18">
+      <img src="Discover.png" height ="24">
+      <p>Card Type: *
+          <select name="card_type" id="card_tupe" required>
+            <option value="">--Select a Card Type--</option>
+            <option value="Visa">Visa</option>
+            <option value="Rupay">Rupay</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Discover">Discover</option>
+          </select>
+      </p>
+
+      <p>
+        Card Number * 
+        <input type="number" name="card_number" id="card_number" placeholder="1111-2222-3333-4444" required>
+      </p>
+
+      <p>Expieation Date: * 
+        <input type="date" name="exp_date" id="exp_date" required>
+    </p>
+
+      <p>CVV * 
+        <input type="password" name="cvv" id="cvv" placeholder="123" required>
+    </p>
+
+      <input type="submit" value="Pay Now">
+    </form>
+</div>
+</body>
+</html>

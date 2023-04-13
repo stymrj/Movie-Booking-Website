@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Tickets</title>
+    <link rel="stylesheet" href="style2.css">
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+<df-messenger
+  df-cx="true"
+  location="us-central1"
+  chat-title="Movie Booking Bot"
+  agent-id="cdf0712a-a7a8-4bd3-80c8-509293a3a1bc"
+  language-code="en"
+></df-messenger>
+    
+</head>
+<body>
+      <header class="header">
+         <div>
+        <img class="main-logo" src="book.jpg"/>
+        </div>
+      </header>
+       
+     
+      <div class="movie-container">
+        <label style="font-size: 20px;">Please select a movie: </label>
+        <select id="movie" style="font-size: 16px;">
+          <option value="15">Coming 2 America ($15)</option>
+          <option value="12">The Martian ($12)</option>
+          <option value="9">Pathaan ($9)</option>
+          <option value="8">Farzi ($8)</option>
+          <option value="5">Bhool Bhulaiya 2 ($5)</option>
+          <option value="10">Spider-Man: far from home ($10)</option>
+        </select>
+      </div>
+  
+      <ul class="showcase">
+        <li>
+          <div id="seat" class="seat"></div>
+          <small class="status" style="font-size: 1em;">N/A</small>
+        </li>
+        <li>
+          <div id="seat" class="seat selected"></div>
+          <small class="status" style="font-size: 1em;">Selected</small>
+        </li>
+        <li>
+          <div id="seat" class="seat occupied"></div>
+          <small class="status" style="font-size: 1em;">Occupied</small>
+        </li>
+      </ul>
+  
+      <div class="container">
+        <div class="screen"></div>
+  
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat occupied"></div>
+        </div>
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+        <div class="row">
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat occupied"></div>
+          <div id="seat" class="seat"></div>
+        </div>
+      </div>
+  
+      <p class="text" style="font-size: 20px;margin:0px 0px 15px 0px">
+        You have selected : <span id="count">0</span> SEATS 
+        <br>For a PRICE of : $
+        <span id="total">0</span
+        >
+      </p><br>
+  
+      <a href="./index.html">
+        <button class="btn"><a href="payment.html"> <b>BUY TICKET</b></a>
+         
+        </button>
+      </a>
+      
+      <br>
+  
+      <a href="index.html">
+        <button class="btn2"><a href="index.html"> <b>Back to Home</b></a>        </button>
+      </a>
+  
+      <script>
+       
+        var count=0;
+        var seats=document.getElementsByClassName("seat");
+        for(var i=0;i<seats.length;i++){
+          var item=seats[i];
+          
+          item.addEventListener("click",(event)=>{
+            var price= document.getElementById("movie").value;
+  
+            if (!event.target.classList.contains('occupied') && !event.target.classList.contains('selected') ){
+            count++;
+            
+            var total=count*price;
+            event.target.classList.add("selected");
+            document.getElementById("count").innerText=count;
+            document.getElementById("total").innerText=total;
+  
+            }
+          })
+        }
+      </script>
+
+      <footer class="footer"></footer>
+      <p class="bot">&copy; 2023 Satyam Raj. All rights reserved.</p>
+</body>
+</html>
