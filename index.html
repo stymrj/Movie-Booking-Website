@@ -4,32 +4,24 @@
 <head>
 	<title>Online Movie Ticket Booking</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
-
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script> 
 <df-messenger
-
   df-cx="true"
-
-  location="us-central1"
-
-  chat-title="MovieBot"
-
-  agent-id="cdf0712a-a7a8-4bd3-80c8-509293a3a1bc"
-
+  chat-title="Movie_Ticket_Booker"
+  agent-id="438baaaf-2740-4922-a0c8-89ba4db50659"
   language-code="en"
-
 ></df-messenger>
 </head>
 <body bgcolor="black">
 	<div class="container">
-		<div class="navbar">
-			<img src="logo.png" class="logo">
+		<div class="menu">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="booking.html">Book Ticket</a></li>
-				<li><a href="chatbot.html">Chatbot</a></li>
-				<li><a href="#">Search Movies</a></li>
-				<li><a href="contactus.html">About us</a></li>
+				<li><img src="logo.png" class="logo"></li>
+				<li class="active">HOME</li>
+				<li href="movies.html">MOVIES</li>
+				<li href="chatbot.html">CHATBOT</li>
+				<li href="contatctus.html">ABOUT US</li>
+				<li><a href="login.html" class="sign"><span>Login</span></a></li>
 			</ul>
 		</div>
 		<div class="ban">
@@ -48,6 +40,4 @@
 	</div>
 
 </body>
-	
-	
 </html>
