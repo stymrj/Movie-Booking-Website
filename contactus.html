@@ -2,23 +2,29 @@
 <html>
         <head>
           <title>Contact us</title>
-          <link rel="stylesheet" href="contactus.css">     
-        </head>
-        <body>
-                 <!-- main -->
+          
+        <link rel="stylesheet" href="contactus.css">     
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+        <df-messenger
+        df-cx="true"
+        location="us-central1"
+        chat-title="Movie Booking Bot"
+        agent-id="cdf0712a-a7a8-4bd3-80c8-509293a3a1bc"
+        language-code="en"
+      ></df-messenger>
+</head>
+    <body>
     <main>
-         <div class="bg">
-                <div class="navbar">
-                        <img src="logo.png" class="logo">
-                        <ul>
-                         <li><a href="index.html">Home</a></li>
-                         <li><a href="book.html">Book Ticket</a></li>
-                         <li><a href="chatbot.html">Chatbot</a></li>
-                        <li><a href="#">Search Movies</a></li>
-                        <li><a href="contactus.html">About us</a></li>
-                        </ul>
-                        </div>
-                </div>
+      <div class="navbar">
+        <img src="logo.png" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book.html">Book Ticket</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="#">Search Movies</a></li>
+            <li><a href="contactus.html">About us</a></li>
+        </ul>
+    </div>
         <header>
          <h1>Movie Booking Chatbot</h1>            
          </header>
@@ -38,21 +44,8 @@
                         </div>
                 </div>
 
-                
                 <p class="bot">&copy; 2023 Satyam Raj. All rights reserved.</p>
-<!-- social icons -->
-<div class="social-icon">
-        <a href="https://www.instagram.com/swag__55__/"
-          ><i class="fa-brands fa-instagram icons"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/prabakaran-m-105289219/"
-          ><i class="fa-brands fa-linkedin icons"></i
-        ></a>
-        <a href="https://github.com/Prabakara-N"
-          ><i class="fa-brands fa-github icons"></i
-        ></a>
-      </div>
-    </main>
-        </body>
-
+        </main>
+              </body>
+        
 </html>

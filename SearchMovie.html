@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="SearchMovie.css" />
+    <title>DIT Project</title>
+        
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+        <df-messenger
+        df-cx="true"
+        location="us-central1"
+        chat-title="Movie Booking Bot"
+        agent-id="cdf0712a-a7a8-4bd3-80c8-509293a3a1bc"
+        language-code="en"
+      ></df-messenger>
+  </head>
+  <body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Ticket</a></li>
+                <li><a href="chatbot.html">Chatbot</a></li>
+                <li><a href="SearchMovie.html">Search Movies</a></li>
+                <li><a href="contactus.html">About us</a></li>
+            </ul>
+        </div>
+      <form id="form">
+        <input type="text" id="search" class="search" placeholder="Search" />
+      </form>
+     
+    </header>
+
+    <main id="main">
+    </main>
+    <script src="SearchMovie.js"></script>
+  </body>
+</html>
